@@ -1,3 +1,22 @@
+p,
+a,
+label,
+span {
+  font-family: "custom-font-regular" !important;
+}
+button{
+  font-family: "custom-font-regular" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "custom-font-bold" !important;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +54,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+.modal-content{
+  border-radius: 5rem !important;
+}
+.modal h1{
+  color: #090F64;
+}
+.modal p{
+  color: #090F64;
+}
+.modal-button{
+  padding: 1rem;
+  width: 10rem;
+  background: #04BD9F;
+  color: #fff;
+  box-shadow: 0px 8px 20px 2px #04BD9F4D;
+  border: none;
+  border-radius: 30px;
+  font-family: 'custom-font-bold';
+  font-size: 1.25rem;
+}
+.reactour__popover{
+  width: 25rem;
+  padding: 2rem 4rem !important;
+  text-align: center !important;
+  border-radius: 30px;
+  direction: rtl !important;
+  font-family: "custom-font-regular" !important;
+  color: #090F64 !important;
+}
+
+.css-1fxnrfa-Navigation{
+display: none !important;
+}
+
+.next-button{
+  width: 5rem;
+  padding: 0.25rem 0;
+  background-color: #04BD9F;
+  border-radius: 15px;
+  color: #fff;
+  border: 1px solid #04BD9F;
+}
+.last-button{
+  width: 5rem;
+  padding: 0.25rem 0;
+  background-color: transparent;
+  border-radius: 15px;
+  color: #04BD9F;
+  border: 1px solid #04BD9F;
 }

@@ -1,5 +1,5 @@
 .body {
-    padding: 2.5rem 15rem !important;
+    padding: 5rem 15rem !important;
     .top-wrapper {
         z-index: -1;
         .text-section {
@@ -23,7 +23,6 @@
         z-index: 1;
         bottom: 13rem;
         max-width: 58rem;
-        min-height: 48rem;
         background: rgba(245, 252, 255, 1);
         box-shadow: 0px 0px 7px #d2d2d2;
         border-radius: 40px;
@@ -93,6 +92,13 @@
                     transition: 0.25s;
                     &:hover{
                         transform: scale(1.1);
+                    }
+                    &:disabled{
+                        background-color: #888888;
+                        box-shadow: none;
+                        &:hover{
+                            transform: none;
+                        }
                     }
                 }
             }

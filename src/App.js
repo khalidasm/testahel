@@ -15,7 +15,7 @@ function App() {
     const getUser = async () => {
       await axios.get('http://localhost:3001/get_user').then(res => {
         if (res) {
-          axios.get(`http://10.1.110.202/api/Tistahel/GetCurrentUser?userName=kahmed`, {
+          axios.get(`http://10.1.110.202/api/Tistahel/GetCurrentUser?userName=${res.data}`, {
             headers: {
               'Authorization': 'QXZlbG8gQ29yZSBBUEkgZm9yIEVzb2x1dGlvbg=='
             }
@@ -25,13 +25,6 @@ function App() {
             } else {
               setCookie('user_info', resp.data[0], { path: '/' });
               setCookie('user_id', res.data, { path: '/' });
-                axios.get(`http://10.1.110.202/api/Tistahel/GetCount?userName=kahmed`, {
-                    headers: {
-                        'Authorization': 'QXZlbG8gQ29yZSBBUEkgZm9yIEVzb2x1dGlvbg=='
-                    }
-                }).then(response => {
-                  setCookie('user_counts', response.data[0], { path: '/' });
-                })
               setTimeout(() => {
                 window.location.reload()
               }, 2000);
@@ -46,10 +39,9 @@ function App() {
     if (!cookies.user_info) {
       getUser()
     }
-    if (lang != "en" && lang != "ar") {
+    if (lang != "en-US" && lang != "ar") {
       localStorage.setItem("lang", "ar");
     }
-    
   })
   return (
     <div class="App">

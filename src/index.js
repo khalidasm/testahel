@@ -7,6 +7,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Home from './Home';
 import FadeIn from 'react-fade-in'
 import {CookiesProvider} from 'react-cookie'
+import 'sweetalert2/src/sweetalert2.scss'
+import './i18n';
 
 ReactDOM.render(
   <CookiesProvider>

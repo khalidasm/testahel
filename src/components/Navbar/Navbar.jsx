@@ -18,11 +18,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Avatar from '@mui/material/Avatar';
 import { useCookies } from 'react-cookie';
 import './Navbar.scss'
+import { UserContext } from '../../UserContext';
 
 
 
 
 export default function Navbar() {
+    const {userToken} = React.useContext(UserContext)
     const [cookies, setCookie] = useCookies(['user'], ['lang']);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -66,9 +68,9 @@ export default function Navbar() {
         >
         <MenuItem onClick={() => {
             if(lang === 'ar'){
-                localStorage.setItem('lang','en')
+                localStorage.setItem('lang','en-US')
                 window.location.reload()
-            }else if(lang === 'en'){
+            }else if(lang === 'en-US'){
                 localStorage.setItem('lang','ar')
                 window.location.reload()
             }
@@ -113,8 +115,7 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" style={{
                 padding: '1rem', direction: `${lang ==='ar' ? 'rtl' : 'ltr'}`,
-                background: 'rgb(7,128,187)',
-                background: 'radial-gradient(circle, rgba(7,128,187,1) 25%, rgba(4,187,160,1) 100%, rgba(4,187,160,1) 100%)'
+                background: '#002554'
             }}>
                 <Toolbar>
                     <Typography
@@ -133,7 +134,7 @@ export default function Navbar() {
                             aria-label="show 17 new notifications"
                             color="inherit"
                         >
-                            <Badge badgeContent={cookies.user_counts.sentCount} color="error">
+                            <Badge badgeContent={userToken.receiveCount} color="error">
                                 <img src={Medal} />
                             </Badge>
                         </IconButton>
@@ -157,7 +158,7 @@ export default function Navbar() {
                             >
                                 <Avatar
                                     alt=""
-                                    src=''
+                                    src={cookies.user_info.userImage}
                                     sx={{ width: 56, height: 56 }}
                                 />
                             </IconButton>

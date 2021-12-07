@@ -1,18 +1,18 @@
 @font-face {
   font-family: "custom-font-light";
-  src: url("./assets/fonts/Almarai-Light.ttf") format("truetype");
+  src: url("./assets/fonts/NeoSansArabicLight.ttf") format("truetype");
 }
 @font-face {
   font-family: "custom-font-regular";
-  src: url("./assets/fonts/Almarai-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Neo\ Sans\ Arabic\ Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "custom-font-bold";
-  src: url("./assets/fonts/Almarai-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/NeoSansArabicBold.ttf") format("truetype");
 }
 @font-face {
   font-family: "custom-font-extra";
-  src: url("./assets/fonts/Almarai-ExtraBold.ttf") format("truetype");
+  src: url("./assets/fonts/NeoSansArabicUltra.ttf") format("truetype");
 }
 
 body {

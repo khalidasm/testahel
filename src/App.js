@@ -13,7 +13,7 @@ function App() {
   const lang = localStorage.getItem('lang')
   React.useEffect(() => {
     const getUser = async () => {
-      await axios.get('http://localhost:3001/get_user').then(res => {
+      await axios.get('http://10.1.110.203:3001/get_user').then(res => {
         if (res) {
           axios.get(`http://10.1.110.202/api/Tistahel/GetCurrentUser?userName=${res.data}`, {
             headers: {
